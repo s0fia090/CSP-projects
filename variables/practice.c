@@ -1,6 +1,21 @@
-#include <stdio.h>
+name=(sofia);
 
-int main(void){
-    printf("Hello World");
-    return 0;
-}
+nmbr110=(7);
+
+nmbr1700= ("655")
+
+bkrfst=(egos);
+
+favcol= (red);
+
+schl= (UCAS);
+
+yr=(2024);
+
+eyecol="brown
+
+age=14;
+
+favsubgeography
+
+print="name nmbr110 brkfst favcol schl yr eyecol age favsub"
