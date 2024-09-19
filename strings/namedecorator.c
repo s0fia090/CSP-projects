@@ -4,6 +4,6 @@ int main(void){
     float name;
     printf("hello, what is your name?\n");
     scanf("%f", &name);
-    scanf("<<<>>>\n");
+    printf("%s", &name);
     return 0;
 }
