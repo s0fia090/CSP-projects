@@ -5,7 +5,7 @@ int main(void){
     char animal[20];
     char place[20];
     char verb[20];
-    char sentence[400] = "the";
+    char sentence[400] = "the ";
     printf("name an animal: \n");
     fgets(animal, sizeof(animal), stdin);
     printf("name a place: \n");
