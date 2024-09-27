@@ -1,37 +1,20 @@
-def input_value(type):
-    var = float(input(f"monthly {type}:\n"))
-    return var
+print("Hello! This is a financail caculator!")
+income = float(input("how much do you make a month?:\n"))
+rent = float(input("how much doess your rent cost?:\n"))
+utilities = float(input("what does your utilities cost?:\n"))
+groceries = float(input("how much does your groceries cost?:\n"))
+trasnportation = float(input("how much does your trasportation cost:\n"))
+print("you make", income)
+savings = income*0.2
+expenses= rent + utilities + groceries + trasnportation
+spending = income-expenses-savings
+def percent(type, amount):
+    per = amount/income *100
 
-def percent(type, amount, income):
-    per = (amount / income) * 100
-    print(f"your {type} is {per:.0f}% of your income.")
+    print(f"your {type} is {per}% income.")
 
-def main():
-    print("Hello, and welcome to your financial calculator!")
-    income = input_value("income")
-    rent = input_value("rent")
-    utilities = input_value("utilities")
-    groceries = input_value("groceries")
-    transportation = input_value("transportation")
-   
-    # Calculations
-    expenses = rent + utilities + groceries + transportation
-    savings = income * 0.20  # 20% savings
-    spend = income - expenses - savings
-   
-    # Output results
-    print(f"Your monthly income is ${income:.2f}")
-    print(f"Your monthly expenses are ${expenses:.2f}")
-    print(f"Your monthly savings is ${savings:.2f}")
-    print(f"Your monthly spending money is ${spend:.2f}")
-   
-    percent("rent", rent, income)
-    percent("utilities", utilities, income)
-    percent("groceries", groceries, income)
-    percent("transportation", transportation, income)
-    percent("savings", savings, income)
-    percent("expenses", expenses, income)
-    percent("spend", spend, income)
-
-if __name__ == "__main__":
-    main()
+print(f"your income are", expenses)
+print(f"your expenses is", rent)
+print(f"your saving are", utilities)
+print(f"your spending are", groceries)
+print(f"your trasnportation cost is", trasnportation)
