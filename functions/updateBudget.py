@@ -1,25 +1,28 @@
-print("Hello! This is a financial caculator!")
-income=float(input("how much do you make a month?:\n"))
-rent=float(input("how much doess your rent cost?:\n"))
-utilities=float(input("what does your utilities cost?:\n"))
-groceries=float(input("how much does your groceries cost?:\n"))
-transportation=float(input("how much does your trasportation cost:\n"))
-savings = income *.2
-expenses= rent + utilities + groceries + transportation
-spending = income-expenses-savings
 
-def percent(type, amount):
-    per = amount/income *100
+def user_inputs(type):
+    return float(input(f"Monthly {type}"))
 
-    return f"your {type} is {per}% income."
+def divide(type, income):
+    return type/ income *100
+
     
-print(f"your monthly income is ${income: .2f}\n")
-print(f"your monthly expenses is ${expenses: .2f}\n")
-print(f"your monthly savings is ${savings: .2f}\n")
-print(f"your monthly spending money is ${spending: .2f}\n")
-print(percent("rent", rent))
-print(percent("utilities", utilities))
-print(percent("groceries", groceries))
-print(percent("transportation", transportation))
-print(percent("savings", savings))
-print(percent("expenses", expenses))
+
+income = user_inputs("income: ")
+rent = user_inputs("rent:")
+utilities = user_inputs("utilities:")
+groceries = user_inputs("groceries:")
+transportation = user_inputs("transportation:")
+savings = income*0.2
+expenses = rent + utilities + groceries + transportation
+spend = income-int(expenses)-savings
+
+def percent(type,amount):
+    per = amount / income *100
+    return(f"Your {type} is {per}% income")
+
+print(percent("rent percentage", rent))
+print(percent("utilities percentage", utilities))
+print(percent("groceries percentage", groceries))
+print(percent("transportation percentage", transportation))
+print(percent("expenses percentage", expenses))
+print(percent("spending percentage", spend))
